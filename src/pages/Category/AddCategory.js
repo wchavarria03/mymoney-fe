@@ -29,7 +29,13 @@ const AddCategory = props => {
       </Group>
       <Group>
         <Label>Type</Label>
-        <Control type="text" name="type" value={category.type} onChange={handleInputChange} />
+        <Control as="select" name="type" value={category.type} onChange={handleInputChange} >
+          {
+            props.categoryTypes.map((categoryType) => {
+              return (<option>categoryType.name</option>);
+            })
+          }
+        </Control>
       </Group>
       <Button type="submit">Add new category</Button>
     </Form>

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import CategoryTypePage from '../pages/CategoryType/CategoryType';
+import { API_URI } from '../constants';
 
 const Category = () => {
   const [categoryTypes, setCategoryTypes] = useState([]);
 
-  function handleCategories(status) {
+  function handleCategoryTypes(status) {
     setCategoryTypes(status);
   }
 
   const addCategoryType = categoryType => {
-    categoryType.id = categoryTypes.length + 1;
     // setCategories([...categories, category]);
-    window.fetch('http://localhost:3000/api/categorytypes', {
+    window.fetch(`${API_URI}/v1/category_types`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ categoryType: categoryType }),
@@ -19,7 +19,7 @@ const Category = () => {
   }
 
   useEffect(() => {
-    window.fetch('http://localhost:3000/api/categories', handleCategories);
+    window.fetch(`${API_URI}/v1/category_types`).then(response => response.json()).then(handleCategoryTypes);
   });
 
   return <CategoryTypePage categoryTypes={categoryTypes} addCategoryType={addCategoryType} />;

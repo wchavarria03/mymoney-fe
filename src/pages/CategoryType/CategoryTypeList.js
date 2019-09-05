@@ -2,7 +2,9 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
-const CategoryTypeList = ({ categoryTypes = [] }) => (
+const CategoryTypeList = ({ categoryTypes = [] }) => {
+debugger;
+return(
   <Table responsive hover>
     <thead>
       <tr>
@@ -29,5 +31,5 @@ const CategoryTypeList = ({ categoryTypes = [] }) => (
     </tbody>
   </Table>
 );
-
+    }
 export default CategoryTypeList;

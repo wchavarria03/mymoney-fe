@@ -3,9 +3,14 @@ import CategoryPage from '../pages/Category/Category';
 
 const Category = () => {
   const [categories, setCategories] = useState([]);
+  const [categoryTypes, setCategoryTypes] = useState([]);
 
   function handleCategories(status) {
     setCategories(status);
+  }
+
+  function handleCategoryTypes(status) {
+    setCategoryTypes(status);
   }
 
   const addCategory = category => {
@@ -20,9 +25,10 @@ const Category = () => {
 
   useEffect(() => {
     window.fetch('http://localhost:3000/api/categories', handleCategories);
+    window.fetch('http://localhost:3000/api/category_types', handleCategoryTypes);
   });
 
-  return <CategoryPage categories={categories} addCategory={addCategory} />;
+  return <CategoryPage categories={categories} addCategory={addCategory} categoryTypes={categoryTypes}/>;
 };
 
 export default Category;

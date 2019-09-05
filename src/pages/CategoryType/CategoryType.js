@@ -5,7 +5,6 @@ import CategoryTypeList from './CategoryTypeList';
 
 const Category = ({
   categoryTypes = [],
-  categoryType = {},
   addCategoryType,
 }) =>  (
   <div>

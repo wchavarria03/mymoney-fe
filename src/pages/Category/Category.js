@@ -5,8 +5,8 @@ import CategoryList from './CategoryList';
 
 const Category = ({
   categories = [],
-  category = {},
   addCategory,
+  categoryTypes = [],
 }) =>  (
   <div>
     <Card>
@@ -24,7 +24,7 @@ const Category = ({
         <span className="d-block m-t-5">Add new category</span>
       </Header>
       <Body>
-        <AddCategory addCategory={addCategory} />
+        <AddCategory addCategory={addCategory} categoryTypes={categoryTypes} />
       </Body>
     </Card>
   </div>
