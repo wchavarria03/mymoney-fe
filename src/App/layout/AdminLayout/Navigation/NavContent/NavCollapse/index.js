@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import Aux from "../../../../../../hoc/_Aux";
-import DEMO from "../../../../../../store/constant";
-import * as actionTypes from "../../../../../../store/actions";
+import DEMO from "../../../../../constants";
+import * as actionTypes from "../../../../../../actions";
 import NavIcon from './../NavIcon';
 import NavBadge from './../NavBadge';
 import NavItem from "../NavItem";
@@ -12,8 +12,7 @@ import LoopNavCollapse from './index';
 
 class NavCollapse extends Component {
 
-    componentDidMount() {
-        const currentIndex = ((document.location.pathname).toString().split('/')).findIndex(id => id === this.props.collapse.id);
+    componentDidMount() { const currentIndex = ((document.location.pathname).toString().split('/')).findIndex(id => id === this.props.collapse.id);
         if (currentIndex > -1) {
             this.props.onCollapseToggle(this.props.collapse.id, this.props.type);
         }

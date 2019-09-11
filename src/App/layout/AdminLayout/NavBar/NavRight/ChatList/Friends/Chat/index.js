@@ -4,7 +4,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 import chatMsg from './chat';
 import Messages from './Messages';
 import Aux from "../../../../../../../../hoc/_Aux";
-import DEMO from "../../../../../../../../store/constant";
+import { BLANK_LINK } from "../../../../../../../../constant";
 
 const chat = (props) => {
     let chatClass = ['header-chat'];
@@ -36,7 +36,7 @@ const chat = (props) => {
             <div className={chatClass.join(' ')}>
                 <div className="h-list-header">
                     <h6>{props.user.name}</h6>
-                    <a href={DEMO.BLANK_LINK} className="h-back-user-list" onClick={props.closed}><i className="feather icon-chevron-left" /></a>
+                    <a href={BLANK_LINK} className="h-back-user-list" onClick={props.closed}><i className="feather icon-chevron-left" /></a>
                 </div>
                 <div className="h-list-body">
                     <div className="main-chat-cont">
@@ -50,7 +50,7 @@ const chat = (props) => {
                 <div className="h-list-footer">
                     <div className="input-group">
                         <input type="file" className="chat-attach" style={{display: 'none'}} />
-                        <a href={DEMO.BLANK_LINK} className="input-group-prepend btn btn-success btn-attach">
+                        <a href={BLANK_LINK} className="input-group-prepend btn btn-success btn-attach">
                             <i className="feather icon-paperclip" />
                         </a>
                         <input type="text" name="h-chat-text" className="form-control h-send-chat" placeholder="Write hear . . " />

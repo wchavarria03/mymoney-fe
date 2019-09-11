@@ -1,29 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux';
+
+import * as categoryTypeActions from '../actions/categoryTypeActions';
 import CategoryTypePage from '../pages/CategoryType/CategoryType';
-import { API_URI } from '../constants';
 
-const Category = () => {
-  const [categoryTypes, setCategoryTypes] = useState([]);
-
-  function handleCategoryTypes(status) {
-    setCategoryTypes(status);
+class CategoryType extends Component {
+  componentWillMount() { // HERE WE ARE TRIGGERING THE ACTION
+    this.props.stuffActions.fetchStuff();
   }
 
-  const addCategoryType = categoryType => {
-    // setCategories([...categories, category]);
-    window.fetch(`${API_URI}/v1/category_types`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ categoryType: categoryType }),
-    });
+  addCategoryType() {
+    console.log('Adding category type');
   }
 
-  useEffect(() => {
-    window.fetch(`${API_URI}/v1/category_types`).then(response => response.json()).then(handleCategoryTypes);
-  });
-
-  return <CategoryTypePage categoryTypes={categoryTypes} addCategoryType={addCategoryType} />;
+  render() {
+    return <CategoryTypePage categoryTypes={this.props.categoryTypes} addCategoryType={this.addCategoryType} />;
+  }
 };
 
-export default Category;
+const mapStateToProps = (state) => ({
+  categoryTypes: state.categoryTypes,
+});
 
+const mapDispatchToProps = (dispatch) => ({
+  categoryTypeActions: bindActionCreators(categoryTypeActions, dispatch),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CategoryType);
