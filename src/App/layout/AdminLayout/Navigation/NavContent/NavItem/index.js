@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {NavLink} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
 import windowSize from 'react-window-size';
 
 import Aux from "../../../../../../hoc/_Aux";
 import NavIcon from "./../NavIcon";
 import NavBadge from "./../NavBadge";
-import * as actionTypes from "../../../../../../store/actions";
+import * as actionTypes from "../../../../../../actions/actionTypes";
 
 class NavItem extends Component {
 

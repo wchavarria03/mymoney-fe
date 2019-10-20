@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 import '../../../assets/scss/style.scss';
 import Aux from "../../../hoc/_Aux";
 import Breadcrumb from "../../../App/layout/AdminLayout/Breadcrumb";
-import DEMO from "../../../store/constant";
+import { BLANK_LINK } from "../../../constants";
 
 class SignUp1 extends React.Component {
     render () {
@@ -37,7 +37,7 @@ class SignUp1 extends React.Component {
                                 <div className="form-group text-left">
                                     <div className="checkbox checkbox-fill d-inline">
                                         <input type="checkbox" name="checkbox-fill-2" id="checkbox-fill-2"/>
-                                            <label htmlFor="checkbox-fill-2" className="cr">Send me the <a href={DEMO.BLANK_LINK}> Newsletter</a> weekly.</label>
+                                            <label htmlFor="checkbox-fill-2" className="cr">Send me the <a href={BLANK_LINK}> Newsletter</a> weekly.</label>
                                     </div>
                                 </div>
                                 <button className="btn btn-primary shadow-2 mb-4">Sign up</button>

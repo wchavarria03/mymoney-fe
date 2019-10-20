@@ -8,7 +8,7 @@ import {
 } from 'react-bootstrap';
 
 import Aux from "../../../hoc/_Aux";
-import DEMO from "../../../store/constant";
+import { BLANK_LINK } from "../../../constants";
 
 class BasicCollapse extends Component {
     state = {
@@ -52,7 +52,7 @@ class BasicCollapse extends Component {
                         <hr/>
                         <Card>
                             <Card.Header>
-                                <Button href={DEMO.BLANK_LINK} onClick={() => this.setState({ isBasic: !isBasic })} aria-controls="basic-collapse" aria-expanded={isBasic}>Collapse Link</Button>
+                                <Button href={BLANK_LINK} onClick={() => this.setState({ isBasic: !isBasic })} aria-controls="basic-collapse" aria-expanded={isBasic}>Collapse Link</Button>
                                 <Button onClick={() => this.setState({ isBasic: !isBasic })}>Collapse Button</Button>
                             </Card.Header>
                             <Collapse in={this.state.isBasic}>
@@ -109,7 +109,7 @@ class BasicCollapse extends Component {
                         <Card className="mt-2">
                             <Card.Header>
                                 <Card.Title as="h5">
-                                    <a href={DEMO.BLANK_LINK}
+                                    <a href={BLANK_LINK}
                                        onClick={() => this.setState({ accordionKey: (accordionKey !== 1) ? 1 : 0 })}
                                        aria-controls="accordion1"
                                        aria-expanded={accordionKey=== 1}>
@@ -135,7 +135,7 @@ class BasicCollapse extends Component {
                         <Card className="mt-2">
                             <Card.Header>
                                 <Card.Title as="h5">
-                                    <a href={DEMO.BLANK_LINK}
+                                    <a href={BLANK_LINK}
                                        onClick={() => this.setState({ accordionKey: (accordionKey !== 2) ? 2 : 0 })}
                                        aria-controls="accordion2"
                                        aria-expanded={accordionKey === 2}>
@@ -161,7 +161,7 @@ class BasicCollapse extends Component {
                         <Card className="mt-2">
                             <Card.Header>
                                 <Card.Title as="h5">
-                                    <a href={DEMO.BLANK_LINK}
+                                    <a href={BLANK_LINK}
                                        onClick={() => this.setState({ accordionKey: (accordionKey !== 3) ? 3 : 0 })}
                                        aria-controls="accordion3"
                                        aria-expanded={accordionKey === 3}>

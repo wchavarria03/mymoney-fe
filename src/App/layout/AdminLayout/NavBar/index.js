@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 import NavLeft from "./NavLeft";
 import NavRight from "./NavRight";
 import Aux from "../../../../hoc/_Aux";
-import { BLANK_LINK } from "../../../../constant";
-import * as actionTypes from "../../../../store/actions";
+import { BLANK_LINK } from "../../../../constants";
+import * as actionTypes from "../../../../actions/actionTypes";
 
 class NavBar extends Component {
     render() {

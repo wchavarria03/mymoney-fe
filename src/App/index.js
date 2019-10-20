@@ -14,6 +14,11 @@ const AdminLayout = Loadable({
   loading: Loader
 });
 
+const NotFound = Loadable({
+  loader: () => import('../pages/NotFound'),
+  loading: Loader
+});
+
 class App extends Component {
   render() {
     const menu = routes.map((route, index) => {
@@ -36,6 +41,7 @@ class App extends Component {
             <Switch>
               {menu}
               <Route path="/" component={AdminLayout} />
+              <Route component={NotFound} />
             </Switch>
           </Suspense>
         </ScrollToTop>

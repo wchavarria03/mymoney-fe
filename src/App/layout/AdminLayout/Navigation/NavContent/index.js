@@ -6,8 +6,8 @@ import windowSize from 'react-window-size';
 
 import Aux from "../../../../../hoc/_Aux";
 import NavGroup from './NavGroup';
-import DEMO from "../../../../../store/constant";
-import * as actionTypes from "../../../../../store/actions";
+import { BLANK_LINK } from "../../../../../constants";
+import * as actionTypes from "../../../../../actions/actionTypes";
 
 class NavContent extends Component {
     state = {
@@ -64,13 +64,13 @@ class NavContent extends Component {
 
             mainContent = (
                 <div className="navbar-content sidenav-horizontal" id="layout-sidenav">
-                    <a href={DEMO.BLANK_LINK} className={prevClass.join(' ')} onClick={this.scrollPrevHandler}><span/></a>
+                    <a href={BLANK_LINK} className={prevClass.join(' ')} onClick={this.scrollPrevHandler}><span/></a>
                     <div id="sidenav-wrapper" className="sidenav-horizontal-wrapper">
                         <ul id="sidenav-horizontal" className="nav pcoded-inner-navbar sidenav-inner" onMouseLeave={this.props.onNavContentLeave} style={{marginLeft: '-'+this.state.scrollWidth+'px'}}>
                             {navItems}
                         </ul>
                     </div>
-                    <a href={DEMO.BLANK_LINK} className={nextClass.join(' ')} onClick={this.scrollNextHandler}><span/></a>
+                    <a href={BLANK_LINK} className={nextClass.join(' ')} onClick={this.scrollNextHandler}><span/></a>
                 </div>
             );
         } else {

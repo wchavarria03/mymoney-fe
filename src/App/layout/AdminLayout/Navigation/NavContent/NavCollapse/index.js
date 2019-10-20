@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import Aux from "../../../../../../hoc/_Aux";
-import DEMO from "../../../../../constants";
-import * as actionTypes from "../../../../../../actions";
+import { BLANK_LINK } from "../../../../../../constants";
+import * as actionTypes from "../../../../../../actions/actionTypes";
 import NavIcon from './../NavIcon';
 import NavBadge from './../NavBadge';
 import NavItem from "../NavItem";
@@ -13,9 +13,9 @@ import LoopNavCollapse from './index';
 class NavCollapse extends Component {
 
     componentDidMount() { const currentIndex = ((document.location.pathname).toString().split('/')).findIndex(id => id === this.props.collapse.id);
-        if (currentIndex > -1) {
-            this.props.onCollapseToggle(this.props.collapse.id, this.props.type);
-        }
+      if (currentIndex > -1) {
+          this.props.onCollapseToggle(this.props.collapse.id, this.props.type);
+      }
     }
 
     render() {
@@ -68,7 +68,7 @@ class NavCollapse extends Component {
 
         const subContent = (
             <Aux>
-                <a href={DEMO.BLANK_LINK} className={navLinkClass.join(' ')} onClick={() => this.props.onCollapseToggle(this.props.collapse.id, this.props.type)}>
+                <a href={BLANK_LINK} className={navLinkClass.join(' ')} onClick={() => this.props.onCollapseToggle(this.props.collapse.id, this.props.type)}>
                     <NavIcon items={this.props.collapse} />
                     {itemTitle}
                     <NavBadge layout={this.props.layout} items={this.props.collapse} />

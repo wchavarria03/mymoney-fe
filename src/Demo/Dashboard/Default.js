@@ -2,7 +2,7 @@ import React from 'react';
 import {Row, Col, Card, Table, Tabs, Tab} from 'react-bootstrap';
 
 import Aux from "../../hoc/_Aux";
-import DEMO from "../../store/constant";
+import { BLANK_LINK } from "../../constants";
 
 import avatar1 from '../../assets/images/user/avatar-1.jpg';
 import avatar2 from '../../assets/images/user/avatar-2.jpg';
@@ -14,7 +14,7 @@ class Dashboard extends React.Component {
             <Aux>
                 <div className="media friendlist-box align-items-center justify-content-center m-b-20">
                     <div className="m-r-10 photo-table">
-                        <a href={DEMO.BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar1} alt="activity-user"/></a>
+                        <a href={BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar1} alt="activity-user"/></a>
                     </div>
                     <div className="media-body">
                         <h6 className="m-0 d-inline">Silje Larsen</h6>
@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
                 </div>
                 <div className="media friendlist-box align-items-center justify-content-center m-b-20">
                     <div className="m-r-10 photo-table">
-                        <a href={DEMO.BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar2} alt="activity-user"/></a>
+                        <a href={BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar2} alt="activity-user"/></a>
                     </div>
                     <div className="media-body">
                         <h6 className="m-0 d-inline">Julie Vad</h6>
@@ -32,7 +32,7 @@ class Dashboard extends React.Component {
                 </div>
                 <div className="media friendlist-box align-items-center justify-content-center m-b-20">
                     <div className="m-r-10 photo-table">
-                        <a href={DEMO.BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar3} alt="activity-user"/></a>
+                        <a href={BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar3} alt="activity-user"/></a>
                     </div>
                     <div className="media-body">
                         <h6 className="m-0 d-inline">Storm Hanse</h6>
@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
                 </div>
                 <div className="media friendlist-box align-items-center justify-content-center m-b-20">
                     <div className="m-r-10 photo-table">
-                        <a href={DEMO.BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar1} alt="activity-user"/></a>
+                        <a href={BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar1} alt="activity-user"/></a>
                     </div>
                     <div className="media-body">
                         <h6 className="m-0 d-inline">Frida Thomse</h6>
@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
                 </div>
                 <div className="media friendlist-box align-items-center justify-content-center m-b-20">
                     <div className="m-r-10 photo-table">
-                        <a href={DEMO.BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar2} alt="activity-user"/></a>
+                        <a href={BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar2} alt="activity-user"/></a>
                     </div>
                     <div className="media-body">
                         <h6 className="m-0 d-inline">Silje Larsen</h6>
@@ -59,7 +59,7 @@ class Dashboard extends React.Component {
                 </div>
                 <div className="media friendlist-box align-items-center justify-content-center">
                     <div className="m-r-10 photo-table">
-                        <a href={DEMO.BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar3} alt="activity-user"/></a>
+                        <a href={BLANK_LINK}><img className="rounded-circle" style={{width: '40px'}} src={avatar3} alt="activity-user"/></a>
                     </div>
                     <div className="media-body">
                         <h6 className="m-0 d-inline">Storm Hanse</h6>
@@ -146,7 +146,7 @@ class Dashboard extends React.Component {
                                         <td>
                                             <h6 className="text-muted"><i className="fa fa-circle text-c-green f-10 m-r-15"/>11 MAY 12:56</h6>
                                         </td>
-                                        <td><a href={DEMO.BLANK_LINK} className="label theme-bg2 text-white f-12">Reject</a><a href={DEMO.BLANK_LINK} className="label theme-bg text-white f-12">Approve</a></td>
+                                        <td><a href={BLANK_LINK} className="label theme-bg2 text-white f-12">Reject</a><a href={BLANK_LINK} className="label theme-bg text-white f-12">Approve</a></td>
                                     </tr>
                                     <tr className="unread">
                                         <td><img className="rounded-circle" style={{width: '40px'}} src={avatar2} alt="activity-user"/></td>
@@ -157,7 +157,7 @@ class Dashboard extends React.Component {
                                         <td>
                                             <h6 className="text-muted"><i className="fa fa-circle text-c-red f-10 m-r-15"/>11 MAY 10:35</h6>
                                         </td>
-                                        <td><a href={DEMO.BLANK_LINK} className="label theme-bg2 text-white f-12">Reject</a><a href={DEMO.BLANK_LINK} className="label theme-bg text-white f-12">Approve</a></td>
+                                        <td><a href={BLANK_LINK} className="label theme-bg2 text-white f-12">Reject</a><a href={BLANK_LINK} className="label theme-bg text-white f-12">Approve</a></td>
                                     </tr>
                                     <tr className="unread">
                                         <td><img className="rounded-circle" style={{width: '40px'}} src={avatar3} alt="activity-user"/></td>
@@ -168,7 +168,7 @@ class Dashboard extends React.Component {
                                         <td>
                                             <h6 className="text-muted"><i className="fa fa-circle text-c-green f-10 m-r-15"/>9 MAY 17:38</h6>
                                         </td>
-                                        <td><a href={DEMO.BLANK_LINK} className="label theme-bg2 text-white f-12">Reject</a><a href={DEMO.BLANK_LINK} className="label theme-bg text-white f-12">Approve</a></td>
+                                        <td><a href={BLANK_LINK} className="label theme-bg2 text-white f-12">Reject</a><a href={BLANK_LINK} className="label theme-bg text-white f-12">Approve</a></td>
                                     </tr>
                                     <tr className="unread">
                                         <td><img className="rounded-circle" style={{width: '40px'}} src={avatar1} alt="activity-user"/></td>
@@ -179,7 +179,7 @@ class Dashboard extends React.Component {
                                         <td>
                                             <h6 className="text-muted f-w-300"><i className="fa fa-circle text-c-red f-10 m-r-15"/>19 MAY 12:56</h6>
                                         </td>
-                                        <td><a href={DEMO.BLANK_LINK} className="label theme-bg2 text-white f-12">Reject</a><a href={DEMO.BLANK_LINK} className="label theme-bg text-white f-12">Approve</a></td>
+                                        <td><a href={BLANK_LINK} className="label theme-bg2 text-white f-12">Reject</a><a href={BLANK_LINK} className="label theme-bg text-white f-12">Approve</a></td>
                                     </tr>
                                     <tr className="unread">
                                         <td><img className="rounded-circle" style={{width: '40px'}} src={avatar2} alt="activity-user"/></td>
@@ -190,7 +190,7 @@ class Dashboard extends React.Component {
                                         <td>
                                             <h6 className="text-muted"><i className="fa fa-circle text-c-green f-10 m-r-15"/>21 July 12:56</h6>
                                         </td>
-                                        <td><a href={DEMO.BLANK_LINK} className="label theme-bg2 text-white f-12">Reject</a><a href={DEMO.BLANK_LINK} className="label theme-bg text-white f-12">Approve</a></td>
+                                        <td><a href={BLANK_LINK} className="label theme-bg2 text-white f-12">Reject</a><a href={BLANK_LINK} className="label theme-bg text-white f-12">Approve</a></td>
                                     </tr>
                                     </tbody>
                                 </Table>

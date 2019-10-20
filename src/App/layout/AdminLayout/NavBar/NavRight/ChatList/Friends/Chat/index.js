@@ -4,7 +4,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 import chatMsg from './chat';
 import Messages from './Messages';
 import Aux from "../../../../../../../../hoc/_Aux";
-import { BLANK_LINK } from "../../../../../../../../constant";
+import { BLANK_LINK } from "../../../../../../../../constants";
 
 const chat = (props) => {
     let chatClass = ['header-chat'];

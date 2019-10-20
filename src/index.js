@@ -7,7 +7,7 @@ import App from './App/index';
 import * as serviceWorker from './serviceWorker';
 import config from './config';
 
-import configureStore from '../store/configureStore';
+import configureStore from './store/configureStore';
 
 const app = (
   <Provider store={configureStore}>

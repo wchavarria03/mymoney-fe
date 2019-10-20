@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import windowSize from 'react-window-size';
 
 import Aux from "../../../../../../hoc/_Aux";
-import { BLANK_LINK } from "../../../../../../constant";
+import { BLANK_LINK } from "../../../../../../constants";
 
 class NavSearch extends Component {
     state = {

@@ -8,7 +8,7 @@ import {
 
 import Aux from "../../../hoc/_Aux";
 import Card from "../../../App/components/MainCard";
-import DEMO from "../../../store/constant";
+import { BLANK_LINK } from "../../../constants";
 
 class BreadcrumbPagination extends Component {
     render() {
@@ -48,15 +48,15 @@ class BreadcrumbPagination extends Component {
                     <Col md={6}>
                         <Card title="Breadcrumb">
                             <Breadcrumb>
-                                <Breadcrumb.Item href={DEMO.BLANK_LINK} active>Home</Breadcrumb.Item>
+                                <Breadcrumb.Item href={BLANK_LINK} active>Home</Breadcrumb.Item>
                             </Breadcrumb>
                             <Breadcrumb>
-                                <Breadcrumb.Item href={DEMO.BLANK_LINK}>Home</Breadcrumb.Item>
-                                <Breadcrumb.Item href={DEMO.BLANK_LINK} active>Library</Breadcrumb.Item>
+                                <Breadcrumb.Item href={BLANK_LINK}>Home</Breadcrumb.Item>
+                                <Breadcrumb.Item href={BLANK_LINK} active>Library</Breadcrumb.Item>
                             </Breadcrumb>
                             <Breadcrumb>
-                                <Breadcrumb.Item href={DEMO.BLANK_LINK}>Home</Breadcrumb.Item>
-                                <Breadcrumb.Item href={DEMO.BLANK_LINK}>Library</Breadcrumb.Item>
+                                <Breadcrumb.Item href={BLANK_LINK}>Home</Breadcrumb.Item>
+                                <Breadcrumb.Item href={BLANK_LINK}>Library</Breadcrumb.Item>
                                 <Breadcrumb.Item active>Data</Breadcrumb.Item>
                             </Breadcrumb>
                         </Card>
@@ -64,15 +64,15 @@ class BreadcrumbPagination extends Component {
                     <Col md={6}>
                         <Card title="Breadcrumb Icon">
                             <Breadcrumb>
-                                <Breadcrumb.Item href={DEMO.BLANK_LINK} active><i className="feather icon-home" /></Breadcrumb.Item>
+                                <Breadcrumb.Item href={BLANK_LINK} active><i className="feather icon-home" /></Breadcrumb.Item>
                             </Breadcrumb>
                             <Breadcrumb>
-                                <Breadcrumb.Item href={DEMO.BLANK_LINK}><i className="feather icon-home" /></Breadcrumb.Item>
-                                <Breadcrumb.Item href={DEMO.BLANK_LINK} active>Library</Breadcrumb.Item>
+                                <Breadcrumb.Item href={BLANK_LINK}><i className="feather icon-home" /></Breadcrumb.Item>
+                                <Breadcrumb.Item href={BLANK_LINK} active>Library</Breadcrumb.Item>
                             </Breadcrumb>
                             <Breadcrumb>
-                                <Breadcrumb.Item href={DEMO.BLANK_LINK}><i className="feather icon-home" /></Breadcrumb.Item>
-                                <Breadcrumb.Item href={DEMO.BLANK_LINK}>Library</Breadcrumb.Item>
+                                <Breadcrumb.Item href={BLANK_LINK}><i className="feather icon-home" /></Breadcrumb.Item>
+                                <Breadcrumb.Item href={BLANK_LINK}>Library</Breadcrumb.Item>
                                 <Breadcrumb.Item active>Data</Breadcrumb.Item>
                             </Breadcrumb>
                         </Card>
