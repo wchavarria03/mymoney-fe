@@ -11,6 +11,7 @@ import Loader from "../Loader";
 import routes from "../../../routes";
 import Aux from "../../../hoc/_Aux";
 import * as actionTypes from "../../../actions/actionTypes";
+import config from '../../../config.js'
 
 import './app.scss';
 
@@ -70,7 +71,7 @@ class AdminLayout extends Component {
                                             <Suspense fallback={<Loader/>}>
                                                 <Switch>
                                                     {menu}
-                                                    <Redirect from="/" to={this.props.defaultPath} />
+                                                    <Redirect from="/" to={config.defaultPath} />
                                                 </Switch>
                                             </Suspense>
                                         </div>
@@ -87,7 +88,6 @@ class AdminLayout extends Component {
 
 const mapStateToProps = state => {
     return {
-        defaultPath: state.defaultPath,
         isFullScreen: state.isFullScreen,
         collapseMenu: state.collapseMenu,
         configBlock: state.configBlock,

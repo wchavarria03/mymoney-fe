@@ -10,7 +10,7 @@ import config from './config';
 import configureStore from './store/configureStore';
 
 const app = (
-  <Provider store={configureStore}>
+  <Provider store={configureStore()}>
     <BrowserRouter basename={config.basename}>
       <App />
     </BrowserRouter>

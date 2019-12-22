@@ -103,9 +103,9 @@ class NavCollapse extends Component {
 
 const mapStateToProps = state => {
     return {
-        layout: state.layout,
-        isOpen: state.isOpen,
-        isTrigger: state.isTrigger
+        layout: state.navigation.layout,
+        isOpen: state.navigation.isOpen,
+        isTrigger: state.navigation.isTrigger
     }
 };
 
